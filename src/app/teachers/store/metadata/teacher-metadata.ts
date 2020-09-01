@@ -1,8 +1,8 @@
 import { EntityMetadataMap } from '@ngrx/data';
+import { Teacher } from 'src/app/shared/models/teacher.model';
 
 export const teacherMetadataMap: EntityMetadataMap = {
   Teacher: {
-    // entityName: storeNames.course, //optional
-    // selectId: (course: Course) => course.courseId // si el id es diferente a id hay que especificarlo
+    selectId: (teacher: Teacher) => teacher.idTeacher // si el id es diferente a id hay que especificarlo
   }
 };

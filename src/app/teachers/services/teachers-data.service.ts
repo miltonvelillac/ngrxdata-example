@@ -18,8 +18,8 @@ export class TeachersDataService extends DefaultDataService<Teacher> {
     super(storeNames.course, http, httpUrlGenerator);
     }
 
-    getAll(): Observable<any[]> {
-      return of([{name: 'hello'}]);
+    getAll(): Observable<Teacher[]> {
+      return of([{name: 'Goku', idTeacher: '123'}, {name: 'Gohan', idTeacher: '456'}]);
       return this.http.get('https://run.mocky.io/v3/762ea2b5-50d4-4562-8813-7c5e8f156929').pipe(
         tap(() => console.log('teacher service')),
         map((resp: any) => resp)
