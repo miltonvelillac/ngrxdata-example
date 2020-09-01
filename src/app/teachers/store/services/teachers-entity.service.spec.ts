@@ -1,20 +1,27 @@
 import { TestBed } from '@angular/core/testing';
+import { EntityCollectionServiceElementsFactory } from '@ngrx/data';
+import { TeachersEntityService } from './teachers-entity.service';
 
-import { TeachersEntityService, EntityCollectionServiceBaseMock } from './teachers-entity.service';
-import { EntityCollectionServiceBase, EntityCollectionServiceElementsFactory } from '@ngrx/data';
-
-fdescribe('TeachersEntityService', () => {
+describe('TeachersEntityService', () => {
   let service: TeachersEntityService;
 
-  const entityCollectionServiceBaseMock = new EntityCollectionServiceBaseMock(undefined);
+  let ecsefMock;
+
+  const ecsebMock = {
+    getByKey: () => {},
+    dispatcher: {},
+    selectors$: {}
+  };
+
+  beforeEach(() => {
+    ecsefMock = jasmine.createSpyObj('EntityCollectionServiceElementsFactory', ['create']);
+    ecsefMock.create.and.returnValue(ecsebMock);
+  });
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
-        {
-          provide: EntityCollectionServiceElementsFactory,
-          useValue: {}
-        }
+        { provide: EntityCollectionServiceElementsFactory, useValue:  ecsefMock }
       ]
     });
     service = TestBed.inject(TeachersEntityService);

@@ -15,6 +15,3 @@ export class TeachersEntityService extends EntityCollectionServiceBase<Teacher> 
   }
 }
 
-export class EntityCollectionServiceBaseMock {
-  constructor(serviceElementsFactory: any) {}
-}
