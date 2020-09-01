@@ -5,7 +5,7 @@ import { storeNames } from '../app-store/metadata/entity-metadata';
 import { TeachersDataService } from './services/teachers-data.service';
 import { TeachersRoutingModule } from './teachers-routing.module';
 import { TeachersComponent } from './teachers.component';
-import { teacherMetadataMap } from './store/metadata/teacher-metadata';
+import { teacherMetadataMap } from './store/metadata/teacher.metadata';
 
 
 

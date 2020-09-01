@@ -2,8 +2,9 @@ import { EntityMetadataMap } from '@ngrx/data';
 import { Course } from 'src/app/shared/models/course.model';
 
 function compareTwoCourses(courseOne: Course, courseTwo: Course) {
-  if (courseOne.name < courseTwo.name) { return -1; }
-  if (courseOne.name > courseTwo.name) { return 1; }
+  const compare = Number(courseOne.id) - Number(courseTwo.id);
+  if (compare < 0) { return 1; }
+  if (compare > 0) { return -1; }
   return 0;
 }
 

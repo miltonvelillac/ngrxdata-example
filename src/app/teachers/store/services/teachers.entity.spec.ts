@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { EntityCollectionServiceElementsFactory } from '@ngrx/data';
-import { TeachersEntityService } from './teachers-entity.service';
+import { TeachersEntityService } from './teachers.entity';
 
 describe('TeachersEntityService', () => {
   let service: TeachersEntityService;

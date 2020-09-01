@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TeachersEntityService } from './store/services/teachers-entity.service';
+import { TeachersEntityService } from './store/services/teachers.entity';
 
 @Component({
   selector: 'app-teachers',
