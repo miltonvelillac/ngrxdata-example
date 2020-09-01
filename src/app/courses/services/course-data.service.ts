@@ -31,7 +31,6 @@ export class CourseDataService extends DefaultDataService<Course> {
     httpUrlGenerator: HttpUrlGenerator
   ) {
     super(storeNames.course, http, httpUrlGenerator);
-    console.log('Created custom Hero EntityDataService');
   }
 
   getAll(): Observable<Course[]> {

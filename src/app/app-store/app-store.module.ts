@@ -7,6 +7,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { entityConfig, storeNames } from './metadata/entity-metadata';
 import { CourseDataService } from '../courses/services/course-data.service';
+import { TeachersDataService } from '../teachers/services/teachers-data.service';
 
 
 @NgModule({

@@ -13,18 +13,8 @@ import { CoursesComponent } from './courses.component';
     CommonModule,
     HttpClientModule
   ],
-  exports: [
-    CoursesComponent
-  ],
   providers: [
     CourseDataService
   ]
 })
-export class CoursesModule {
-  constructor(
-    entityDataService: EntityDataService,
-    courseDataService: CourseDataService
-  ) {
-    entityDataService.registerService(storeNames.course, courseDataService);
-  }
-}
+export class CoursesModule {}
