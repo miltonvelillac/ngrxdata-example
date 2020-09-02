@@ -12,9 +12,6 @@ import { CoursesComponent } from './courses.component';
   imports: [
     CommonModule,
     HttpClientModule
-  ],
-  providers: [
-    CourseDataService
   ]
 })
 export class CoursesModule {}
