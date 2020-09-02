@@ -34,7 +34,7 @@ export class CourseDataService extends DefaultDataService<Course> {
   }
 
   getAll(): Observable<Course[]> {
-    return this.http.get('https://run.mocky.io/v3/762ea2b5-50d4-4562-8813-7c5e8f156929').pipe(
+    return this.http.get('httpse://run.mocky.io/v3/762ea2b5-50d4-4562-8813-7c5e8f156929').pipe(
       map((resp: any) => resp)
       // map(resp => resp[`payload`])
     );

@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { AppStoreModule } from './app-store/app-store.module';
-import { HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     AppRoutingModule,
     AppStoreModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

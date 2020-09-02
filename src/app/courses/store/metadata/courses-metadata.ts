@@ -16,6 +16,7 @@ export const courseMetadataMap: EntityMetadataMap = {
       // por defecto (pesimista)
       optimisticUpdate: true
     },
+    filterFn: (courses: Course[], pattern?: any) => courses.filter(data => data.name === pattern)
     // entityName: storeNames.course, //optional
     // selectId: (course: Course) => course.courseId // si el id es diferente a id hay que especificarlo
   }
